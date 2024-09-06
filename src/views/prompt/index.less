@@ -1,0 +1,68 @@
+.prompt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(116.82deg, #e5f7fb 0%, #e7e9ff 100%);
+
+  &-header {
+    height: 20px;
+    color: var(--mainTextColor);
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  .prompt-table-header {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+    .header-btns,
+    .header-actions {
+      display: flex;
+
+      .header-btn {
+        display: flex;
+        padding: 0 12px;
+        align-items: center;
+
+        .svg-icon {
+          width: 14px;
+          height: 14px;
+          margin-right: 8px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+
+      .header-action {
+        padding: 6px;
+        display: flex;
+        cursor: pointer;
+        color: #5f7292;
+        border-radius: 6px;
+        background-color: #fff;
+
+        .anticon {
+          font-size: 20px;
+        }
+
+        .svg-icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}

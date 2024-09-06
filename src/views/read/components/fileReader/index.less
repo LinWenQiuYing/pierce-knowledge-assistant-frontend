@@ -1,0 +1,249 @@
+.file-reader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  border-radius: 16px;
+  flex-direction: column;
+  background-color: #fff;
+
+  &-header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    padding: 0 16px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-200);
+
+    .header-title {
+      font-size: 16px;
+      color: var(--mainTextColor);
+      font-weight: 600;
+      overflow: hidden;
+      line-height: 56px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+
+      &-size {
+        display: flex;
+        align-items: center;
+
+        .size-btn {
+          cursor: pointer;
+          color: #5f7292;
+          margin-right: 8px;
+        }
+
+        .size-text {
+          width: 54px;
+          height: 24px;
+          padding: 0 8px;
+          font-size: 14px;
+          margin-right: 8px;
+          user-select: none;
+          line-height: 24px;
+          text-align: center;
+          border-radius: 4px;
+          background: #f1f2f5;
+          color: var(--mainTextColor);
+        }
+      }
+
+      &-search {
+        width: 126px;
+        margin-right: 16px;
+        border-radius: 20px !important;
+
+        .ant-input-prefix {
+          color: #5f7292;
+        }
+      }
+
+      &-robot {
+        cursor: pointer;
+        margin-right: 16px;
+      }
+
+      &-close {
+        cursor: pointer;
+        color: #5f7292;
+      }
+    }
+  }
+
+  &-loading {
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  &-content {
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    flex: 1 1 0%;
+    overflow: auto;
+    position: relative;
+    height: calc(100% - 56px);
+
+    .file-docx {
+      .docx-wrapper {
+        display: block;
+        background: none;
+        padding: 0 !important;
+
+        .docx {
+          box-shadow: none;
+          padding: 24px !important;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    .file-pdf {
+      &-content {
+        position: relative;
+      }
+    }
+
+    .file-txt {
+      padding: 24px;
+      white-space: pre-wrap;
+    }
+
+    .highlight {
+      background: var(--yellow);
+      color: var(--mainTextColor);
+    }
+
+    .textLayer {
+      .highlight {
+        margin: 0;
+        margin-top: -3px;
+        margin-left: -1px;
+        position: relative;
+      }
+    }
+  }
+
+  &-tools {
+    right: 0;
+    bottom: 8px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+
+    span {
+      margin-right: 8px;
+    }
+
+    .skip {
+      width: 56px;
+      height: 24px;
+      margin: 0 8px;
+    }
+
+    .tools-btn {
+      cursor: pointer;
+    }
+  }
+
+  &-drawer {
+    top: 48px;
+
+    .ant-drawer-content-wrapper {
+      box-shadow: none;
+
+      .ant-drawer-content {
+        backdrop-filter: blur(12px);
+        background-color: rgba(255, 255, 255, 0.6);
+
+        .ant-drawer-wrapper-body {
+          .ant-drawer-header {
+            background: none;
+
+            .ant-drawer-title {
+              display: flex;
+              align-items: center;
+
+              .title-close {
+                margin-right: 8px;
+              }
+
+              .title-img {
+                width: 22px;
+                height: 22px;
+                margin-right: 8px;
+              }
+
+              .title-text {
+                font-size: 16px;
+                font-weight: 600;
+              }
+            }
+          }
+
+          .ant-drawer-body {
+            .content-item {
+              padding: 12px;
+              border-radius: 8px;
+              margin-bottom: 16px;
+              background-color: #fff;
+              box-shadow: 0px 10px 16px 4px rgba(31, 48, 78, 0.04),
+                0px 2px 8px 0px rgba(31, 48, 78, 0.05);
+
+              &-header {
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .header-left {
+                  display: flex;
+                  align-items: center;
+
+                  .header-title {
+                    margin-left: 8px;
+                    font-weight: 600;
+                    color: var(--mainTextColor);
+                  }
+                }
+
+                .header-fold {
+                  cursor: pointer;
+                }
+              }
+
+              &-content {
+                padding-top: 16px;
+                line-height: 20px;
+                color: var(--mainTextColor);
+              }
+
+              &-footer {
+                display: flex;
+                margin-top: 8px;
+                justify-content: flex-end;
+
+                .ant-divider {
+                  top: 0;
+                  height: 14px;
+                }
+
+                .footer-img {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

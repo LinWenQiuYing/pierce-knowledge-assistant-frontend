@@ -1,0 +1,80 @@
+.write {
+  &-table {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+  }
+
+  &-header {
+    height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 16px;
+    color: var(--mainTextColor);
+  }
+
+  .write-table-header {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+    .header-btns,
+    .header-actions {
+      display: flex;
+
+      .header-btn {
+        display: flex;
+        padding: 0 12px;
+        align-items: center;
+
+        .svg-icon {
+          width: 14px;
+          height: 14px;
+          margin-right: 8px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+
+      .header-action {
+        padding: 6px;
+        display: flex;
+        cursor: pointer;
+        color: #5f7292;
+        border-radius: 6px;
+        background-color: #fff;
+
+        .anticon {
+          font-size: 20px;
+        }
+
+        .svg-icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+.write-modal {
+  &-content {
+    .item {
+      margin-bottom: 8px;
+
+      .name {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

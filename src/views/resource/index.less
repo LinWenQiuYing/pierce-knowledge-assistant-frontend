@@ -1,0 +1,126 @@
+.resource {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(116.82deg, #e5f7fb 0%, #e7e9ff 100%);
+
+  &-move-line {
+    z-index: 9;
+    width: 10px;
+    cursor: col-resize;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  &-right {
+    width: calc(100% - 298px);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      height: 20px;
+      line-height: 20px;
+      margin-bottom: 16px;
+
+      .ant-breadcrumb {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        & > span {
+          height: 20px;
+          display: flex;
+
+          .ant-breadcrumb-link {
+            display: flex;
+
+            img {
+              display: inline-block;
+            }
+          }
+
+          .ant-breadcrumb-separator {
+            display: flex;
+            align-items: center;
+          }
+
+          &:first-child {
+            cursor: pointer;
+          }
+
+          &:last-child {
+            color: var(--mainTextColor);
+            font-weight: 600;
+
+            .ant-breadcrumb-separator {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .resource-table-header {
+      height: 32px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      justify-content: space-between;
+
+      .header-btns,
+      .header-actions {
+        display: flex;
+
+        .btn-upload {
+          margin-right: 16px;
+        }
+
+        .header-btn {
+          display: flex;
+          padding: 0 12px;
+          align-items: center;
+
+          .svg-icon {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+          }
+
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+        }
+
+        .header-action {
+          padding: 6px;
+          display: flex;
+          cursor: pointer;
+          color: #5f7292;
+          border-radius: 6px;
+          background-color: #fff;
+
+          .anticon {
+            font-size: 20px;
+          }
+
+          .svg-icon {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.move-modal {
+  .ant-modal-content {
+    .ant-select {
+      width: 100%;
+    }
+  }
+}

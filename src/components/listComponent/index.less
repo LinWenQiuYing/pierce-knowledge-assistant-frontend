@@ -1,0 +1,305 @@
+.list-component {
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 236px;
+  position: relative;
+  padding-bottom: 72px;
+
+  &-spin {
+    top: 82px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .no-content {
+    width: 100%;
+    height: 164px;
+    text-align: center;
+    line-height: 164px;
+    background: #fff;
+    border-radius: 16px;
+    color: var(--black-25);
+  }
+
+  &-item {
+    width: 208px;
+    height: 164px;
+    cursor: pointer;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 10px 16px 4px rgba(31, 48, 78, 0.04),
+      0px 2px 8px 0px rgba(31, 48, 78, 0.05);
+
+    &:hover {
+      .item-footer-icon {
+        display: flex;
+      }
+    }
+
+    // &.active {
+    //   background-image: url("../../assets/images/img/icon-selected.svg");
+    //   background-repeat: no-repeat;
+    //   background-position: right bottom;
+    // }
+
+    &.promt-item {
+      width: 266px;
+      height: 320px;
+    }
+
+    &.read-item {
+      width: 266px;
+      height: 130px;
+
+      .item-top-title {
+        display: flex;
+      }
+
+      .item-title {
+        width: 100%;
+        height: 22px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .item-footer {
+        padding: 0px 16px 12px 16px;
+      }
+    }
+
+    .item-top {
+      display: flex;
+      color: var(--mainTextColor);
+      padding: 12px 16px;
+      flex-direction: column;
+
+      &.audio {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 120, 120, 0.15) 0%,
+          rgba(255, 120, 120, 0) 54.03%
+        );
+      }
+
+      &.code {
+        background: linear-gradient(
+          180deg,
+          rgba(83, 183, 244, 0.15) 0%,
+          rgba(83, 183, 244, 0) 54.03%
+        );
+      }
+
+      &.database {
+        background: linear-gradient(
+          180deg,
+          rgba(249, 137, 80, 0.15) 0%,
+          rgba(249, 137, 80, 0) 54.03%
+        );
+      }
+
+      &.doc {
+        background: linear-gradient(
+          180deg,
+          rgba(83, 183, 244, 0.15) 0%,
+          rgba(83, 183, 244, 0) 54.03%
+        );
+      }
+
+      &.excel {
+        background: linear-gradient(
+          180deg,
+          rgba(83, 211, 156, 0.15) 0%,
+          rgba(83, 211, 156, 0) 54.03%
+        );
+      }
+
+      &.folder {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 220, 83, 0.15) 0%,
+          rgba(255, 220, 83, 0) 56.84%
+        );
+      }
+
+      &.pdf {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 120, 120, 0.15) 0%,
+          rgba(255, 120, 120, 0) 54.03%
+        );
+      }
+
+      &.picture {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 199, 87, 0.15) 0%,
+          rgba(255, 199, 87, 0) 54.03%
+        );
+      }
+
+      &.text {
+        background: linear-gradient(
+          180deg,
+          rgba(79, 211, 151, 0.15) 0%,
+          rgba(79, 211, 151, 0) 54.03%
+        );
+      }
+
+      &.video {
+        background: linear-gradient(
+          180deg,
+          rgba(139, 114, 247, 0.15) 0%,
+          rgba(139, 114, 247, 0) 54.03%
+        );
+      }
+
+      &-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+
+        .header-name {
+          width: calc(100% - 48px);
+          margin-right: 8px;
+          font-weight: 600;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &-middle {
+        height: 20px;
+        display: flex;
+        line-height: 20px;
+        margin-bottom: 12px;
+        align-items: center;
+        justify-content: space-between;
+
+        &-left {
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 8px;
+          }
+        }
+
+        &-right {
+          height: 19px;
+          color: #fff;
+          padding: 0 8px;
+          font-size: 12px;
+          line-height: 19px;
+          border-radius: 4px;
+          display: inline-block;
+
+          &.success {
+            background-color: #63cf96;
+          }
+
+          &.fail {
+            background-color: #fd6871;
+          }
+
+          &.ing {
+            background-color: #fe9e17;
+          }
+
+          &.default {
+            background-color: var(--grey);
+          }
+        }
+      }
+
+      &-bottom {
+        height: 20px;
+        display: flex;
+        line-height: 20px;
+        align-items: center;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .item-title {
+      width: 100%;
+      height: 56px;
+      display: flex;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 28px;
+      align-items: center;
+      padding: 12px 16px 16px 16px;
+      justify-content: space-between;
+
+      &-text {
+        overflow: hidden;
+        margin-right: 8px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: calc(100% - 24px);
+      }
+    }
+
+    .item-content {
+      width: 100%;
+      height: 216px;
+      padding: 0 16px;
+      overflow-y: scroll;
+    }
+
+    .item-footer {
+      display: flex;
+      padding: 12px 16px;
+      align-items: center;
+
+      &-icon {
+        width: 24px;
+        height: 24px;
+        display: none;
+        cursor: pointer;
+        color: var(--blue);
+        margin-right: 8px;
+        border-radius: 6px;
+        align-items: center;
+        justify-content: center;
+        background-color: #e6f4ff;
+
+        &.disabled {
+          cursor: not-allowed;
+          color: var(--black-25);
+        }
+
+        .svg-icon {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    right: 0;
+    bottom: 20px;
+    position: absolute;
+  }
+}

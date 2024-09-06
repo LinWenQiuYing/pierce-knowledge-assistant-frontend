@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>知识助理</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div class="app-loading">
+      <div class="circle-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+  <style>
+    .app-loading {
+      width: 300px;
+      height: 300px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle-loader {
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+
+    .circle-loader div {
+      height: 10px;
+      width: 10px;
+      background-color: #1890ff;
+      border-radius: 50%;
+      position: absolute;
+      -webkit-animation: 0.8s opaque ease-in-out infinite both;
+      animation: 0.8s opaque ease-in-out infinite both;
+    }
+
+    .circle-loader > div:nth-child(1) {
+      top: -25px;
+      left: 0;
+    }
+    .circle-loader > div:nth-child(2) {
+      top: -17px;
+      left: 17px;
+      -webkit-animation-delay: 0.1s;
+      animation-delay: 0.1s;
+    }
+    .circle-loader > div:nth-child(3) {
+      top: 0;
+      left: 25px;
+      -webkit-animation-delay: 0.2s;
+      animation-delay: 0.2s;
+    }
+    .circle-loader > div:nth-child(4) {
+      top: 17px;
+      left: 17px;
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+    .circle-loader > div:nth-child(5) {
+      top: 25px;
+      left: 0;
+      -webkit-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+    .circle-loader > div:nth-child(6) {
+      top: 17px;
+      left: -17px;
+      -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s;
+    }
+    .circle-loader > div:nth-child(7) {
+      top: 0;
+      left: -25px;
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+    .circle-loader > div:nth-child(8) {
+      top: -17px;
+      left: -17px;
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+    }
+
+    @-webkit-keyframes opaque {
+      0% {
+        opacity: 0.1;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 0.1;
+      }
+    }
+
+    @keyframes opaque {
+      0% {
+        opacity: 0.1;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 0.1;
+      }
+    }
+  </style>
+</html>

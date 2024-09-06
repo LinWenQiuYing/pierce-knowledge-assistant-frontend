@@ -1,0 +1,140 @@
+.knowledge-assistant-layout {
+  width: 100%;
+  height: 100%;
+  background: #ebedf1;
+
+  &-header {
+    z-index: 2;
+    height: 48px;
+    display: flex;
+    line-height: 48px;
+    padding: 0px 24px;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(31, 48, 78, 0.05);
+
+    .layout-header-logo {
+      display: flex;
+      align-items: center;
+
+      .logo-img {
+        margin-right: 55px;
+      }
+
+      .logo-title {
+        font-size: 20px;
+        line-height: 28px;
+        padding-right: 100px;
+        color: var(--mainTextColor);
+      }
+    }
+
+    .layout-header-user {
+      width: 344px;
+      display: flex;
+      justify-content: flex-end;
+
+      .user-part {
+        width: 120px;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        align-items: center;
+      }
+
+      .user-name {
+        margin-right: 8px;
+        font-weight: 600;
+        color: var(--mainTextColor);
+      }
+
+      .user-arrow {
+        width: 18px;
+        font-size: 14px;
+        color: var(--mainTextColor);
+      }
+
+      &-pic {
+        margin-right: 12px;
+      }
+    }
+
+    .layout-menu {
+      width: calc(100% - 540px);
+      border-bottom: 0;
+      display: flex;
+      align-items: center;
+
+      &-item {
+        user-select: none;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -8px;
+
+        &.ant-menu-item-selected,
+        &:hover {
+          color: var(--blue);
+          .layout-menu-item-img {
+            color: var(--blue);
+          }
+        }
+        &:focus-visible {
+          box-shadow: none;
+        }
+
+        &-img {
+          width: 16px;
+          height: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #5f7292;
+        }
+      }
+
+      &-submenu {
+        &.ant-menu-submenu-selected,
+        &:hover {
+          .ant-menu-submenu-title {
+            .layout-submenu-img {
+              color: var(--blue);
+            }
+          }
+        }
+
+        .ant-menu-submenu-title {
+          .layout-submenu-img {
+            width: 16px;
+            height: 16px;
+            color: #5f7292;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    width: 100%;
+    height: calc(100% - 48px);
+    background: #fff;
+  }
+}
+
+.user-part-dropdown {
+  .ant-dropdown-content {
+    .ant-dropdown-menu {
+      &-item {
+        text-align: center;
+
+        .item-logout {
+          .anticon {
+            color: var(--red-600);
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
